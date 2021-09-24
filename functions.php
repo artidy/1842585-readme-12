@@ -72,7 +72,7 @@ function getTimeAgo(DateTime $created_date): string
         $date_count = $diff->m;
         $format = ['месяц', 'месяца', 'месяцев'];
     } elseif ($diff->days > 7) { // больше 7 дней
-        $date_count = ceil($diff->a / 7);
+        $date_count = ceil($diff->days / 7);
         $format = ['неделя', 'недели', 'недель'];
     } elseif ($diff->d > 0) { // больше 24 часов
         $date_count = $diff->d;
